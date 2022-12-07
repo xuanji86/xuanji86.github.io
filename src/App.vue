@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <RouterView></RouterView>
   </header>
 
   <main>
-    <TheWelcome />
+    <div class="tab"> Education </div>
+    <div class = "Education">
+      <h2> Iowa State University </h2>
+      <h3> Computer Science </h3>
+      <h3> GPA: 3.48 </h3>
+      <h3> Expected Graduation: May 2023 </h3>
+    </div>
   </main>
 </template>
 
@@ -22,26 +23,12 @@ header {
   line-height: 1.5;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.tab {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: left;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
